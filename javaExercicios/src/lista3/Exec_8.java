@@ -39,7 +39,7 @@ public class Exec_8 {
         nota = new double[n][5];
         
         for(int i=0; i<n; i++){
-            System.out.println("Nome do aluno: ");
+            System.out.print("Nome do aluno: ");
             aluno[i] = sc.next();
             System.out.print("Sexo(M / F): ");
             sexo[i] = sc.next().charAt(0);
@@ -51,7 +51,7 @@ public class Exec_8 {
             
             nota[i][3] = (nota[i][0]+nota[i][1]+nota[i][2])/3; //media
             
-            System.out.println("Numero de faltas: ");
+            System.out.print("Numero de faltas: ");
             nota[i][4] = sc.nextDouble(); //numero de faltas
             
         }
@@ -65,7 +65,8 @@ public class Exec_8 {
         repF = 0;
         
         for(int i=0; i<n; i++){
-            System.out.print("Aluno(a): "+aluno[i]);
+            System.out.println("\n");
+            System.out.println("Aluno(a): "+aluno[i]);
             if(nota[i][3]>=6){
                 System.out.println("Situação: APROVADO");
                 if(sexo[i] == 'M'){
@@ -87,7 +88,20 @@ public class Exec_8 {
                     repF =  repF + 1;
                 }
             }
+            System.out.println("Média: " + nota[i][3]);
         }
+        
+        System.out.println("\n");
+        System.out.println("Média das notas");
+        System.out.println("Homens: "+mediaM/m);
+        System.out.println("Mulheres: "+mediaF/f);
+        System.out.println("\n");
+        System.out.println("Percentual de reprovados");
+        System.out.println("Homens: "+ (repM*100)/m + "%");
+        System.out.println("Mulheres: "+ (repF*100)/f + "%");
+        System.out.println("\n");
+        System.out.print("Percentual de reprovados da turma: ");
+        System.out.println(((repM+repF)*100)/(m+f) + "%");
         
     }
 }
