@@ -16,9 +16,9 @@ public class Exec_9 {
     
     public static void main(String[] args){
         
-        ArrayList<Integer> idades = new ArrayList<Integer>();
-        ArrayList<String> sexos = new ArrayList<String>();
-        ArrayList<Double> salarios = new ArrayList<Double>();
+        ArrayList<Integer> idades = new ArrayList<>();
+        ArrayList<String> sexos = new ArrayList<>();
+        ArrayList<Double> salarios = new ArrayList<>();
         int idade = 0;
         String sexo;
         int maiorIdade = 0;
@@ -30,8 +30,14 @@ public class Exec_9 {
         
         System.out.print("Idade: ");
         idade = sc.nextInt();
+        menorIdade = idade;
         
         while(idade >= 0){
+            
+            if(idade<menorIdade){
+                menorIdade = idade;
+            }
+            idades.add(idade);
             
             do{
                 System.out.print("Sexo: ");
@@ -51,10 +57,11 @@ public class Exec_9 {
             
         }
         
-        for(Double salario : salarios){
-            mediaSalario = mediaSalario + salario;
+        for(Double s : salarios){
+            mediaSalario = mediaSalario + s;
         }
         mediaSalario = mediaSalario/salarios.size();
+        
         
     }
     
