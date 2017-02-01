@@ -49,7 +49,7 @@ public class Exec_9 {
             do{
                 System.out.print("Sexo: ");
                 sexo = sc.next();
-            }while(sexo.equals('f'));//******
+            }while(!(sexo.equals("f") || sexo.equals("m")));//******
                     
             sexos.add(sexo);
                     
@@ -73,7 +73,7 @@ public class Exec_9 {
             if(sexos.get(i).equals("f")){
                 qtdeMulher = qtdeMulher + 1;
                 
-                if(salarios.get(idade)<=1000){
+                if(salarios.get(i)<=1000){
                     qtdeMulher1000 = qtdeMulher1000 + 1;
                 }
                 
@@ -84,6 +84,7 @@ public class Exec_9 {
             }
         }
         
+        System.out.println("\n");
         System.out.println("Média dos salários: "+mediaSalario);
         System.out.println("Maior idade: "+maiorIdade);
         System.out.println("Menor idade: "+menorIdade);
