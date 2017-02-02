@@ -22,7 +22,7 @@ public class Exec_10 {
         ArrayList<Integer> zonas = new ArrayList<>();
         ArrayList<Integer> sessões = new ArrayList<>();
         
-        int zona = 
+        int zona;
         
         Scanner sc =  new Scanner(System.in);
         
@@ -32,7 +32,13 @@ public class Exec_10 {
         candidato2 = sc.next();
         
         System.out.print("Informe a zona: ");
+        zona = sc.nextInt();
         
+        while(zona!=0){
+            zonas.add(zona);
+            System.out.println("Informe a sessão da zona "+zona);
+            
+        }
         
         
         
